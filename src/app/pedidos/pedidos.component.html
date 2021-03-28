@@ -1,0 +1,48 @@
+<div class="container">
+
+    <app-title [title]="title"></app-title>
+
+    <form *ngFor="let item of pedidos">
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label>Cliente</label>
+                <input type="text" class="form-control" value="{{item.Cliente}}" maxlength="100" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Pedido</label>
+                <input type="number" class="form-control" value="{{item.Pedido}}" maxlength="9" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Data</label>
+                <input type="date" class="form-control" value="{{item.Data}}" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Preço</label>
+                <input type="number" class="form-control" value="{{item.Total}}" required>
+            </div>
+        </div>
+    </form>
+
+    <table class="table table-hover">
+
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Valor</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let item of pedidos[0].Produtos;">
+                <td scope="row">{{item.Produto[0].Codigo}}</td>
+                <td>{{item.Produto[0].Nome}}</td>
+                <td>{{item.Produto[0].Quantidade}}</td>
+                <td>{{item.Produto[0].Valor}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>
