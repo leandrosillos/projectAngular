@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class XmlComponent implements OnInit {
 
   public title = "GET XML";
+  public pathImage: string = "assets/image/";
 
   public xml = [
     { nome:'xml1'},

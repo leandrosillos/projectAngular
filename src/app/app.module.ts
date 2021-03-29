@@ -10,6 +10,9 @@ import { NavComponent } from './nav/nav.component';
 import { TitleComponent } from './title/title.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+// import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [							
@@ -24,7 +27,9 @@ import { PedidosComponent } from './pedidos/pedidos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,13 @@
+h4 {
+    font-size: 22px;
+    color: #007bff;
+    ;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+    margin: 40px auto;
+}
+
+tr {
+    /* cursor: pointer; */
+}
